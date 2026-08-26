@@ -83,52 +83,6 @@ Key observations:
 - Model discrimination weakened at longer horizons, with dynamic AUC declining from approximately 0.71 to 0.60.
 - No origination-year cutoff contained enough defaults on both sides for credible out-of-time validation.
 
-## Repository structure
-
-```text
-.
-├── README.md
-├── Freddie_Mac_SBL_End_to_End_Survival_Analysis.ipynb
-├── data/
-│   └── raw/
-│       └── Sheet4.xlsx          # optional; subject to distribution rights
-├── outputs/                     # generated preprocessing outputs
-└── analysis_outputs/            # generated tables and charts
-```
-
-The notebook contains the complete workflow. The generated output folders are optional and do not need to be committed.
-
-## Running the project
-
-### Google Colab
-
-1. Upload `Freddie_Mac_SBL_End_to_End_Survival_Analysis.ipynb` to Google Colab.
-2. Run the installation cell.
-3. Upload `Sheet4.xlsx` when prompted.
-4. Select **Runtime → Run all**.
-
-### Local Jupyter environment
-
-Clone the repository and place the workbook at `data/raw/Sheet4.xlsx`.
-
-```bash
-git clone <your-repository-url>
-cd <your-repository-name>
-```
-
-Install the required packages:
-
-```bash
-pip install "numpy<2.4" "pandas<3" openpyxl pyarrow lifelines scikit-survival seaborn shap jupyter
-```
-
-Start Jupyter:
-
-```bash
-jupyter notebook
-```
-
-Open the consolidated notebook and run all cells.
 
 ## Technology stack
 
@@ -138,7 +92,6 @@ Open the consolidated notebook and run all cells.
 - scikit-survival
 - scikit-learn
 - Matplotlib and Seaborn
-- Jupyter Notebook / Google Colab
 
 ## Limitations
 
@@ -153,16 +106,6 @@ Open the consolidated notebook and run all cells.
 ## Recommended use
 
 This project is best used as an exploratory early-warning and portfolio-monitoring framework. A production implementation would require additional default history, later-vintage validation, macroeconomic covariates, updated property performance data and formal model-risk governance.
-
-## Data and references
-
-The analysis was developed using Freddie Mac Small Balance Loan performance data and the following supporting publications:
-
-- *Small Balance Loan Prepayments* — July 2024
-- *Small Balance Loan Program Handout*
-- *Small Balance Loan Performance Data* — February 2025
-
-Confirm applicable data licensing and distribution requirements before committing the raw workbook to a public repository.
 
 ## Author
 
